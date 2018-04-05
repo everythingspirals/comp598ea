@@ -14,8 +14,8 @@ def running():
 
 # abstract functions
 # make wheels wait
-def wait(time):
-    if (time <= 0):
+def wait(duration):
+    if (duration <= 0):
         # wait until both wheels stuck
         l_side.wait_until_not_moving(),
         r_side.wait_until_not_moving()
@@ -29,22 +29,22 @@ def wait(time):
 def stop():
     l_side.stop(), r_side.stop()
 
-def move_wheels(l_speed, r_speed):
+def move_wheels(l_speed, r_speed, duration=0):
     l_side.run_forever(speed_sp=l_speed),
     r_side.run_forever(speed_sp=r_speed)
-    time.sleep(2.0)
-    #wait(time)
-    stop()
-    stop()
+    #time.sleep(2.0)
+    wait(duration)
+    #stop()
+    #stop()
 
 # movement functions
 # wheels are inverted (spin in opposite directions)
 # timer default is 0 (move forever
-def move_forward(l_speed, r_speed):
-    move_wheels(l_speed, r_speed)
+def move_forward(l_speed, r_speed, duration=0):
+    move_wheels(l_speed, r_speed, duration)
 
-def move_backward(l_speed, r_speed):
-    move_wheels(-l_speed, -r_speed)
+def move_backward(l_speed, r_speed, duration=0):
+    move_wheels(-l_speed, -r_speed, duration)
 
 # turn functions
 # wheels can spin at different speeds
