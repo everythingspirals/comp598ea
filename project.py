@@ -18,14 +18,14 @@ def main():
 
     robot.speak('I am alive')
     while True:
-        # search mode
-        # while(robot.colorSensor.color != 'black' or
-        #       robot.colorSensor.reflected_light_intensity > light):
-        #     robot.wheels.move_forward(speed)
-        #     if(robot.sonicSensor.distance_centimeters > distance or
-        #             robot.touchSensor.is_pressed or
-        #             not robot.wheels.running()):
-        #         robot.wheels.move_forward(speed, speed, 200)
+        #search mode
+        while(robot.colorSensor.color != 'black' or robot.colorSensor.reflected_light_intensity > light):
+            #robot.wheels.move_forward(speed)
+            robot.speak('I am alive')
+
+            if(robot.sonicSensor.distance_centimeters > distance or robot.touchSensor.is_pressed or not robot.wheels.running()):
+                #robot.wheels.move_forward(speed, speed, 200)
+                robot.speak('I am alive')
 
         # # defense mode
         # while(robot.colorSensor.color == 'black' or
