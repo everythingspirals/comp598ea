@@ -19,7 +19,7 @@ def main():
     robot.speak('I am alive')
     while True:
         #search mode
-        while(not robot.hasDot()):
+        while(not robot.hasDot(light)):
             robot.wheels.move_forward(speed)
             #robot.speak('I am alive')
 

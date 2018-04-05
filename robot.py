@@ -16,7 +16,7 @@ def stop():
     wheels.stop()
     weapons.stop()
 
-def hasDot():
+def hasDot(light):
     return (colorSensor.color == 'black' or colorSensor.reflected_light_intensity > light)
 
 def hasCollision():
