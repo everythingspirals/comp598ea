@@ -25,7 +25,7 @@ def main():
             if(robot.sonicSensor.distance_centimeters > distance or
                     robot.touchSensor.is_pressed or
                     not robot.wheels.running()):
-                robot.wheels.turn_left(speed, speed, 200)
+                robot.wheels.move_forward(speed, speed, 200)
 
         # defense mode
         while(robot.colorSensor.color == 'black' or
