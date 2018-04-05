@@ -17,6 +17,8 @@ def main():
     spin_speed = 300
 
     robot.speak('I am alive')
+    robot.wheels.stop()
+
     while True:
         #search mode
         while(not robot.hasDot(light)):
