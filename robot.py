@@ -24,3 +24,6 @@ def hasDot():
 
 def hasCollision():
     return (sonicSensor.distance_centimeters > distance or touchSensor.is_pressed or not wheels.running())
+
+def hasTouch():
+    return touchSensor.is_pressed

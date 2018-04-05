@@ -20,13 +20,16 @@ def main():
     while True:
         #search mode
         while(not robot.hasDot()):
-            robot.wheels.move_forward(speed, speed)
+
+            if(robot.hasTouch()):
+                robot.speak('Collision detected')
+            #robot.wheels.move_forward(speed, speed)
             #robot.speak('I am alive')
 
-            if(robot.hasCollision()):
+            #if(robot.hasCollision()):
                 #robot.wheels.move_forward(speed, speed, 200)
-                robot.wheels.stop()
-                robot.speak('Collision detected!')
+                #robot.wheels.move_forward(speed, speed)
+                #robot.speak('Collision detected!')
 
         # # defense mode
         # while(robot.colorSensor.color == 'black' or
