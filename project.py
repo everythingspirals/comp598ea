@@ -20,7 +20,7 @@ def main():
     while True:
         #search mode
         while(not robot.hasDot(light)):
-            robot.wheels.move_forward(speed)
+            robot.wheels.move_forward(speed, speed)
             #robot.speak('I am alive')
 
             if(robot.hasCollision()):
