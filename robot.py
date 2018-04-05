@@ -23,7 +23,10 @@ def hasDot():
     return (colorSensor.color == 'black' or colorSensor.reflected_light_intensity > light)
 
 def hasCollision():
-    return (sonicSensor.distance_centimeters > distance or touchSensor.is_pressed or not wheels.running())
+    return (hasSight() or hasTouch())
+
+def hasSight():
+    return sonicSensor.distance_centimeters > distance
 
 def hasTouch():
     return touchSensor.is_pressed
