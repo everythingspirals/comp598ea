@@ -15,3 +15,9 @@ def speak(String):
 def stop():
     wheels.stop()
     weapons.stop()
+
+def hasDot():
+    return (colorSensor.color == 'black' or robot.colorSensor.reflected_light_intensity > light)
+
+def hasCollision():
+    return (sonicSensor.distance_centimeters > distance or touchSensor.is_pressed or not wheels.running())

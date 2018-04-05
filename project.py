@@ -19,13 +19,14 @@ def main():
     robot.speak('I am alive')
     while True:
         #search mode
-        while(robot.colorSensor.color != 'black' or robot.colorSensor.reflected_light_intensity > light):
+        while(not robot.hasDot()):
             robot.wheels.move_forward(speed)
             #robot.speak('I am alive')
 
-            if(robot.sonicSensor.distance_centimeters > distance or robot.touchSensor.is_pressed or not robot.wheels.running()):
+            if(robot.hasCollision()):
                 #robot.wheels.move_forward(speed, speed, 200)
-                robot.speak('I am alive')
+                robot.wheels.stop()
+                robot.speak('Collision detected!')
 
         # # defense mode
         # while(robot.colorSensor.color == 'black' or

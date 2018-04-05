@@ -40,11 +40,11 @@ def move_wheels(l_speed, r_speed, time):
 # movement functions
 # wheels are inverted (spin in opposite directions)
 # timer default is 0 (move forever
-def move_forward(speed, speed, time=0):
-    move_wheels(speed, speed, time)
+def move_forward(l_speed, r_speed, time=0):
+    move_wheels(l_speed, r_speed, time)
 
-def move_backward(speed, speed, time=0):
-    move_wheels(-speed, -speed, time)
+def move_backward(l_speed, r_speed, time=0):
+    move_wheels(-l_speed, -r_speed, time)
 
 # turn functions
 # wheels can spin at different speeds
