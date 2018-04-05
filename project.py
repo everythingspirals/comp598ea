@@ -3,7 +3,7 @@ import robot as robot
 # main function not necessary but makes code cleaner
 def main():
     # variables
-    speed = 500
+    speed = 800
 
     # UltraSonicSensor distance
     distance = 20

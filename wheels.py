@@ -1,4 +1,5 @@
 import ev3dev.ev3 as ev3
+import time
 
 # motors
 l_side = ev3.LargeMotor(ev3.OUTPUT_A)
@@ -24,26 +25,32 @@ def wait(time):
         l_side.wait(time),
         r_side.wait(time)
         stop()
+
 def stop():
     l_side.stop(), r_side.stop()
+
 def move_wheels(l_speed, r_speed, time):
     l_side.run_forever(speed_sp=l_speed),
     r_side.run_forever(speed_sp=r_speed)
-    wait(time)
+    time.sleep(2)
+    #wait(time)
+    stop()
+    stop()
 
 # movement functions
 # wheels are inverted (spin in opposite directions)
 # timer default is 0 (move forever
-def move_forward(speed, time=0):
-    move_wheels(-speed, speed, time)
+def move_forward(speed, speed, time=0):
+    move_wheels(speed, speed, time)
 
-def move_backward(speed, time=0):
-    move_wheels(speed, -speed, time)
+def move_backward(speed, speed, time=0):
+    move_wheels(-speed, -speed, time)
 
 # turn functions
 # wheels can spin at different speeds
 # timer required to set turning radius
-def turn_left(l_speed, r_speed, time):
-    move_wheels(l_speed, r_speed, time)
-def turn_right(l_speed, r_speed, time):
-    move_wheels(-l_speed, -r_speed, time)
+def turn_left(speed, time):
+    move_wheels(speed, 0, time)
+
+def turn_right(speed, time):
+    move_wheels(0, speed, time)

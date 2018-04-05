@@ -12,6 +12,6 @@ import robot as robot
 robot.speak('I am alive')
 # robot.swing(600,200)
 
-robot.wheels.move_forward(600)
+#robot.wheels.move_forward(600)
 if(robot.touchSensor.is_pressed):
-    robot.wheels.turn_left(600, 600, 200)
+    r#obot.wheels.turn_left(600, 600, 200)
