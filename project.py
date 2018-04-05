@@ -6,8 +6,6 @@ def main():
     speed = 800
 
     # UltraSonicSensor distance
-    distance = 20
-    light = 10
 
     # Hammer swing strength
     swing_down = 700
@@ -21,7 +19,7 @@ def main():
 
     while True:
         #search mode
-        while(not robot.hasDot(light)):
+        while(not robot.hasDot()):
             robot.wheels.move_forward(speed, speed)
             #robot.speak('I am alive')
 

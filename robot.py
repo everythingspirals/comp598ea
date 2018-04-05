@@ -2,6 +2,9 @@ import ev3dev.ev3 as ev3
 import wheels as wheels
 import weapons as weapons
 
+distance = 20
+light = 10
+
 # sensors
 # sensors have native boolean functions
 sonicSensor = ev3.UltrasonicSensor(ev3.INPUT_1)
@@ -16,7 +19,7 @@ def stop():
     wheels.stop()
     weapons.stop()
 
-def hasDot(light):
+def hasDot():
     return (colorSensor.color == 'black' or colorSensor.reflected_light_intensity > light)
 
 def hasCollision():
