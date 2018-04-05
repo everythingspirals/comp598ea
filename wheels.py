@@ -29,7 +29,7 @@ def wait(time):
 def stop():
     l_side.stop(), r_side.stop()
 
-def move_wheels(l_speed, r_speed, time):
+def move_wheels(l_speed, r_speed):
     l_side.run_forever(speed_sp=l_speed),
     r_side.run_forever(speed_sp=r_speed)
     time.sleep(2.0)
@@ -40,17 +40,17 @@ def move_wheels(l_speed, r_speed, time):
 # movement functions
 # wheels are inverted (spin in opposite directions)
 # timer default is 0 (move forever
-def move_forward(l_speed, r_speed, time=0):
-    move_wheels(l_speed, r_speed, time)
+def move_forward(l_speed, r_speed):
+    move_wheels(l_speed, r_speed)
 
-def move_backward(l_speed, r_speed, time=0):
-    move_wheels(-l_speed, -r_speed, time)
+def move_backward(l_speed, r_speed):
+    move_wheels(-l_speed, -r_speed)
 
 # turn functions
 # wheels can spin at different speeds
 # timer required to set turning radius
-def turn_left(speed, time):
-    move_wheels(speed, 0, time)
+def turn_left(speed):
+    move_wheels(speed, 0)
 
-def turn_right(speed, time):
-    move_wheels(0, speed, time)
+def turn_right(speed):
+    move_wheels(0, speed)
