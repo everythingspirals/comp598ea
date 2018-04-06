@@ -30,7 +30,7 @@ def stop():
     l_side.stop(), r_side.stop()
 
 def move_wheels(l_speed, r_speed, duration=0):
-    if(duration > 0)
+    if(duration > 0):
         l_side.run_timed(speed_sp=l_speed, time_sp=duration)
         r_side.run_timed(speed_sp=r_speed, time_sp=duration)
     else
