@@ -21,15 +21,14 @@ def main():
         #search mode
         while(not robot.hasDot()):
 
-            robot.wheels.move_forward(speed, speed)
-
             if(robot.hasTouch()):
                 robot.speak('Collision detected')
                 robot.stop()
-
-            if(robot.hasSight()):
+            elif(robot.hasSight()):
                 robot.speak('I see you')
                 robot.stop()
+            else:
+                robot.wheels.move_forward(speed, speed)
 
             #robot.wheels.move_forward(speed, speed)
             #robot.speak('I am alive')
