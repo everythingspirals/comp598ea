@@ -25,7 +25,7 @@ def main():
                 robot.speak('Collision detected')
 
             #if():
-            print robot.hasSight()
+            robot.hasSight()
 
             #robot.wheels.move_forward(speed, speed)
             #robot.speak('I am alive')
