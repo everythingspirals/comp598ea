@@ -10,7 +10,7 @@ def running():
     if(l_side.state == 'running',
        r_side.state == 'running'):
         return True
-    return True
+    return False
 
 # abstract functions
 # make wheels wait
@@ -30,7 +30,7 @@ def stop():
     l_side.stop(), r_side.stop()
 
 def move_wheels(l_speed, r_speed, duration=0):
-    if((l_side.state != 'running') or (r_side.state != 'running'))
+    if(running()):
         l_side.run_forever(speed_sp=l_speed),
         r_side.run_forever(speed_sp=r_speed)
     #time.sleep(0.5)
