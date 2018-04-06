@@ -29,6 +29,7 @@ def main():
 
             if(robot.hasSight()):
                 robot.speak('I see you')
+                robot.wheels.move_backward(speed, speed, 10)
                 robot.stop()
 
 
