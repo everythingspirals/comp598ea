@@ -2,7 +2,7 @@ import ev3dev.ev3 as ev3
 import wheels as wheels
 import weapons as weapons
 
-distance = 20
+distance = 5
 light = 10
 
 # sensors
