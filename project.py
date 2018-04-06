@@ -24,8 +24,8 @@ def main():
             if(robot.hasTouch()):
                 robot.speak('Collision detected')
 
-            #if():
-            robot.hasSight()
+            if(robot.hasSight()):
+                robot.speak('I see you')
 
             #robot.wheels.move_forward(speed, speed)
             #robot.speak('I am alive')
