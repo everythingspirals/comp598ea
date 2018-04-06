@@ -26,7 +26,7 @@ def hasCollision():
     return (hasSight() or hasTouch())
 
 def hasSight():
-    return sonicSensor.distance_centimeters > distance
+    return sonicSensor.distance_centimeters
 
 def hasTouch():
     return touchSensor.is_pressed
