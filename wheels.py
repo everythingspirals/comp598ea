@@ -30,7 +30,7 @@ def stop():
     l_side.stop(), r_side.stop()
 
 def move_wheels(l_speed, r_speed, duration=0):
-    if(running()):
+    if(running() == False):
         l_side.run_forever(speed_sp=l_speed),
         r_side.run_forever(speed_sp=r_speed)
     #time.sleep(0.5)
