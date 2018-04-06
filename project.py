@@ -15,17 +15,21 @@ def main():
     spin_speed = 300
 
     robot.speak('I am alive')
-    robot.wheels.stop()
+    robot.stop()
 
     while True:
         #search mode
         while(not robot.hasDot()):
 
+            robot.wheels.move_forward(speed, speed)
+
             if(robot.hasTouch()):
                 robot.speak('Collision detected')
+                robot.stop()
 
             if(robot.hasSight()):
                 robot.speak('I see you')
+                robot.stop()
 
             #robot.wheels.move_forward(speed, speed)
             #robot.speak('I am alive')
